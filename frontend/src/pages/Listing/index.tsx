@@ -36,10 +36,13 @@ function Listing() {
     }, [pageNumber]);//esse pageNumber faz com que quando ele for mudado faça a requisição novamente
 
 
+    const handlePageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber)
+    };
 
     return (
         <>
-            <Pagination />
+            <Pagination page ={page}  onChange = {handlePageChange}/>
 
             <div className="container">
                 <div className="row">
